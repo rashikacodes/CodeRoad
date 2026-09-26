@@ -13,7 +13,7 @@ export async function register(req: Request, res: Response): Promise<void> {
   try {
     const parsed = registerSchema.safeParse(req.body);
     if (!parsed.success) {
-      res.status(400).json({ message: parsed.error.errors[0].message });
+      res.status(400).json({ message: parsed.error.issues[0].message });
       return;
     }
 
@@ -50,7 +50,7 @@ export async function login(req: Request, res: Response): Promise<void> {
   try {
     const parsed = loginSchema.safeParse(req.body);
     if (!parsed.success) {
-      res.status(400).json({ message: parsed.error.errors[0].message });
+      res.status(400).json({ message: parsed.error.issues[0].message });
       return;
     }
 
