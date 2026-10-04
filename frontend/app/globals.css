@@ -67,3 +67,11 @@ body.light {
   background: var(--color-bg-light);
   color: var(--color-text-light);
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #0e0b1a inset;
+  -webkit-text-fill-color: #e0daf0;
+  caret-color: #e0daf0;
+}
